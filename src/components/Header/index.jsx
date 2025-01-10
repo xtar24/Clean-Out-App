@@ -6,7 +6,7 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="bg-yellow-100 text-green fixed w-full z-10 shadow-md">
+    <header className="bg-green-100 text-green fixed w-full z-10 shadow-md">
       <div className="container mx-auto flex justify-between items-center px-4 md:px-6 h-16">
         {/* Logo Section */}
         <div className="flex-shrink-0">
