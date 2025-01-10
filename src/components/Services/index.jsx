@@ -2,38 +2,34 @@ import React from "react";
 import Card from "../Cards";
 
 const Services = () => {
+  const handleLinkClick = (title) => {
+    alert(`You clicked on ${title}`);
+  };
+
   const cardData = [
     {
       title: "Doorstep Pickups",
       description:
-        "Request pickup via the mobile app and we will pickup from your doorstep on schedules days free of charge.",
-      icon: "fa-duotone fa-solid fa-truck-pickup", // Example: House icon from Simple Icons CDN
-      linkUrl: "https://example.com/doorstep-pickups",
-      linkText: "for households, organisations",
+        "Request pickup via the mobile app and we will pick up from your doorstep on scheduled days, free of charge.",
+      iconClass: "fas fa-truck", // FontAwesome icon for a truck
     },
     {
       title: "Community Hubs",
       description:
-        "Locate the nearest community hub to drop off your recyclable wastes and earn points all the same.",
-      icon: "https://cdn.jsdelivr.net/npm/simple-icons/icons/community.svg", // Example: Community icon from Simple Icons CDN
-      linkUrl: "https://example.com/community-hubs",
-      linkText: "for households, for vendors",
+        "Locate the nearest community hub to drop off your recyclable waste and earn points.",
+      iconClass: "fas fa-home", // FontAwesome icon for home
     },
     {
       title: "Self-Service",
       description:
-        "Locate the closest automated machine to recycle only plastics & cans and you get a voucher to redeem.",
-      icon: "https://cdn.jsdelivr.net/npm/simple-icons/icons/recycle.svg", // Example: Recycle icon from Simple Icons CDN
-      linkUrl: "https://example.com/self-service",
-      linkText: "for individuals",
+        "Locate the closest automated machine to recycle only plastics & cans and get a voucher.",
+      iconClass: "fas fa-cogs", // FontAwesome icon for settings
     },
     {
       title: "Offload",
       description:
-        "Sell functional, but decommissioned items in bulk to get maximum value and ensure they don’t end up as wastes.",
-      icon: "https://cdn.jsdelivr.net/npm/simple-icons/icons/sellcast.svg", // Example: Sell icon from Simple Icons CDN
-      linkUrl: "https://example.com/offload",
-      linkText: "for organisations, parks, malls, plazas",
+        "Sell functional, but decommissioned items in bulk to get maximum value and ensure they don’t end up as waste.",
+      iconClass: "fas fa-box", // FontAwesome icon for a box
     },
   ];
 
@@ -44,9 +40,8 @@ const Services = () => {
           key={index}
           title={card.title}
           description={card.description}
-          icon={card.icon} // Pass the icon to the Card component
-          linkUrl={card.linkUrl}
-          linkText={card.linkText}
+          iconClass={card.iconClass} // Pass the icon class to Card
+          onButtonClick={() => handleLinkClick(card.title)}
         />
       ))}
     </div>

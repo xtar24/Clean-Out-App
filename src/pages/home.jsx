@@ -1,5 +1,6 @@
 import React from "react";
 import Services from "../components/Services";
+import Actions from "../components/Actions";
 import playstore from "../assets/playstore.png";
 import appstore from "../assets/appstore.png";
 import vending from "../assets/vending.JPG";
@@ -52,15 +53,40 @@ const Home = () => {
           />
         </div>
       </section>
+
       {/*Section 2*/}
-      <div>
-        <h2>Join our growing platform</h2>
-        <p>
-          identify a recycling program that best suits you and get started for
-          free
+
+      <div className="flex flex-col items-center justify-center text-center px-6 py-8 sm:px-10 sm:py-12 md:py-16 bg-white">
+        {/* Heading */}
+        <h2 className="text-green-900 text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-4">
+          Join Our Growing Platform
+        </h2>
+
+        {/* Description */}
+        <p className="text-gray-700 text-base sm:text-lg md:text-xl leading-relaxed max-w-2xl mb-6">
+          Identify a recycling program that best suits you and get started for
+          free.
         </p>
-        <Services />
-        const first = useContext(second)
+
+        {/* Services Section */}
+        <div className="w-full">
+          <Services />
+        </div>
+      </div>
+
+      {/*Section 3*/}
+      <div>
+        <div className="flex flex-col items-center justify-center text-center px-6 py-8 sm:px-10 sm:py-12 md:py-16 bg-white">
+          {/* Heading */}
+          <h2 className="text-green-900 text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-4">
+            How it works
+          </h2>
+
+          {/* Services Section */}
+          <div className="w-full">
+            <Actions />
+          </div>
+        </div>
       </div>
     </main>
   );

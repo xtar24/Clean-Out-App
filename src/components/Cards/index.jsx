@@ -1,30 +1,19 @@
 import React from "react";
 
-const Card = ({ title, description, icon, linkUrl, linkText }) => {
+const Card = ({ title, description, iconClass, showButton = true }) => {
   return (
-    <div className="max-w-sm rounded overflow-hidden shadow-lg bg-white">
-      {/* Icon */}
-      <div className="p-6 flex justify-center">
-        <img src={icon} alt={title} className="w-16 h-16 object-contain mb-4" />
+    <div className="bg-transparent rounded-lg shadow-lg p-4 text-center">
+      <div className="text-4xl text-green-600 mb-4">
+        <i className={iconClass}></i>
       </div>
-
-      {/* Card Content */}
-      <div className="px-6 py-4">
-        <h3 className="text-xl font-bold mb-2">{title}</h3>
-        <p className="text-gray-700 text-base">{description}</p>
-      </div>
-
-      {/* Link */}
-      <div className="px-6 pt-4 pb-2">
-        <a
-          href={linkUrl}
-          className="inline-flex items-center justify-center bg-green-100 text-customGreen text-sm sm:text-base px-3 py-1 rounded-md hover:bg-blue-950 transition-colors"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          {linkText}
-        </a>
-      </div>
+      <h3 className="text-lg font-bold text-gray-800">{title}</h3>
+      <p className="text-gray-600 text-sm mt-2">{description}</p>
+      {/* Conditionally render the button */}
+      {showButton && (
+        <button className="mt-4 px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700">
+          Learn More
+        </button>
+      )}
     </div>
   );
 };
