@@ -6,7 +6,7 @@ const Cardd = ({ image, message, name, location }) => {
       <img
         src={image}
         alt={name}
-        className="w-24 h-24 mx-auto rounded-xl mb-4"
+        className="w-30 h-30 mx-auto rounded-xl mb-4"
       />
       <p className="text-gray-700 italic mb-2">"{message}"</p>
       <h4 className="text-green-900 font-bold">{name}</h4>

@@ -2,6 +2,7 @@ import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import Brand from "../Brand/index";
 
+
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -44,7 +45,7 @@ const Header = () => {
           <ul className="flex flex-col md:flex-row gap-4">
             <li>
               <NavLink
-                to={"#"}
+                to={"/"}
                 className="hover:underline text-blue-950 text-sm block px-2 py-1 md:px-4"
               >
                 HOME
@@ -52,10 +53,10 @@ const Header = () => {
             </li>
             <li>
               <NavLink
-                to={"#"}
+                to={"/about"}
                 className="hover:underline text-sm block px-2 py-1 md:px-4"
               >
-                RECYCLE
+                ABOUT US
               </NavLink>
             </li>
             <li>
@@ -68,7 +69,7 @@ const Header = () => {
             </li>
             <li>
               <NavLink
-                to={"#"}
+                to={"/contact"}
                 className="hover:underline text-sm block px-2 py-1 md:px-4"
               >
                 HELP CENTER

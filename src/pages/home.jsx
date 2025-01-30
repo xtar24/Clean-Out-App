@@ -12,6 +12,11 @@ import metal from "../assets/metal.jpg";
 import bins from "../assets/bins.png";
 import Testimonies from "../components/Testimonies";
 import Partnership from "../components/Partnership";
+import nema from "../assets/nema.png";
+import firstbank from "../assets/firstbank.jpeg";
+import lmtechhub from "../assets/lmtechhub.webp";
+import who from "../assets/who.png";
+import capture from "../assets/capture.JPG";
 
 const Home = () => {
   return (
@@ -131,7 +136,7 @@ const Home = () => {
         </div>
       </div>
 
-      {/*Section Rewards*/}
+      {/*Section 5 Rewards*/}
       <div className="flex flex-col items-center justify-center text-center px-6 py-8 sm:px-10 sm:py-12 md:py-16 bg-white">
         <h2 className="text-green-900 text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-4">
           Rewards for Recycling
@@ -139,7 +144,7 @@ const Home = () => {
         <Rewards />
       </div>
 
-      {/*Section Explore*/}
+      {/*Section 6 Explore*/}
       <div className="min-h-screen bg-green-200 p-6 sm:p-10 md:p-20 flex flex-col gap-10">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
           {/* Left Content */}
@@ -180,23 +185,23 @@ const Home = () => {
         </div>
       </div>
 
-      {/* Section Testimony */}
+      {/* Section 7 Testimony */}
       <div>
         <Testimonies />
       </div>
 
-      {/*Section  */}
-      <div className="min-h-screen bg-green-200 p-6 sm:p-10 md:p-20 flex flex-col gap-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+      {/*Section 8 Partnership */}
+      <div className="min-h-screen bg-green-200 p-4 sm:p-6 md:p-10 flex flex-col gap-4 sm:gap-5 md:gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 items-center">
           {/* Left Content */}
-          <div className="flex flex-col items-center md:items-start text-center md:text-left">
+          <div className="flex flex-col items-center md:items-start text-center md:text-left mb-4 sm:mb-5 md:mb-6">
             <h3 className="text-green-900 text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-4">
               We are open to partnerships
             </h3>
             <p className="text-gray-700">
               We have solutions to help you incorporate a sustainable recycling
               program and/or shift to eco-friendly alternatives to avoid wastes
-              all together. Our model is consumer-focused and designed to be
+              altogether. Our model is consumer-focused and designed to be
               scalable, socially and environmentally sound
             </p>
             <a
@@ -207,10 +212,68 @@ const Home = () => {
             </a>
           </div>
 
-          {/* Right Content (Image) */}
+          {/* Right Content */}
           <div className="flex justify-center">
-            <Partnership/>
+            <Partnership />
           </div>
+        </div>
+      </div>
+
+      {/* Section 9 Partners*/}
+      <div className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 gap-4 p-4 justify-center items-center">
+        <img
+          src={who}
+          alt="W.H.O"
+          className="w-30 h-30 mx-auto rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300 ease-in-out"
+        />
+        <img
+          src={lmtechhub}
+          alt="LMTech_Hub"
+          className="w-30 h-30 mx-auto rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300 ease-in-out"
+        />
+        <img
+          src={firstbank}
+          alt="First_Bank"
+          className="w-30 h-30 mx-auto rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300 ease-in-out"
+        />
+        <img
+          src={nema}
+          alt="NEMA"
+          className="w-30 h-30 mx-auto rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300 ease-in-out"
+        />
+      </div>
+
+      {/*Section 10 Download*/}
+      <div className="flex flex-col md:flex-row items-center justify-center text-center md:text-center bg-green-200 p-4 sm:p-6 md:p-8 min-h-screen gap-6">
+        {/* Text Content */}
+        <div className="flex-1 flex flex-col items-center justify-center text-center max-w-2xl">
+          {/* Heading */}
+          <h2 className="text-green-900 text-lg sm:text-4xl md:text-5xl font-bold leading-tight mb-4">
+            Download the app Quick and easy
+          </h2>
+
+          {/* Playstore and Appstore Images */}
+          <div className="mt-4 flex flex-wrap items-center justify-center gap-4">
+            <img
+              src={playstore}
+              alt="Playstore"
+              className="w-24 sm:w-28 md:w-32 h-auto object-contain"
+            />
+            <img
+              src={appstore}
+              alt="Appstore"
+              className="w-24 sm:w-28 md:w-32 h-auto object-contain"
+            />
+          </div>
+        </div>
+
+        {/* Right Content - Image */}
+        <div className="flex-1 flex justify-center items-center">
+          <img
+            src={capture}
+            alt="Mobile app"
+            className="w-40 sm:w-48 md:w-56 h-auto rounded-lg shadow-lg"
+          />
         </div>
       </div>
     </main>

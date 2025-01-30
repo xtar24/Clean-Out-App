@@ -40,10 +40,7 @@ const Partnership = () => {
   };
 
   return (
-    <div className="p-6 bg-gray-100">
-      <h2 className="text-2xl font-bold text-green-800 mb-6 text-center">
-        Partnership Opportunities
-      </h2>
+    <div className="p-6">
       <ul className="space-y-6">
         {list.map((item) => (
           <li key={item.id} className="bg-white shadow-lg rounded-lg">
