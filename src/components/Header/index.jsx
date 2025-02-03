@@ -79,7 +79,7 @@ const Header = () => {
 
           {/* Login/Register Button */}
           <NavLink
-            to={"#"}
+            to={"/signup"}
             className="bg-green-700 text-white hover:bg-blue-950 px-4 py-2 rounded-md transition-all text-sm mt-4 md:mt-0"
           >
             LOGIN/REGISTER

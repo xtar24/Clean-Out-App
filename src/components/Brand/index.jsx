@@ -6,7 +6,7 @@ function Brand() {
   return (
     <div className="flex items-center">
       <img src={waste} alt="Logo" className="h-10" />
-      <Link to="/" className="font-bold text-2xl text-green-700 mx-3">
+      <Link to={"/home"} className="font-bold text-2xl text-green-700 mx-3">
         CLEAN-OUT
       </Link>
     </div>
